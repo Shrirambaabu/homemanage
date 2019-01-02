@@ -64,7 +64,9 @@ public class ExpenseListActivity extends AppCompatActivity implements SwipeRefre
 
     @Override
     public boolean onSupportNavigateUp() {
-        finish();
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         return true;
     }
@@ -72,7 +74,9 @@ public class ExpenseListActivity extends AppCompatActivity implements SwipeRefre
     @Override
     public void onBackPressed() {
 
-        finish();
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
